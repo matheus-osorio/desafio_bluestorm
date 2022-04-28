@@ -1,0 +1,20 @@
+ENDPOINT: /patients
+  METHOD: GET
+  DESCRIPTION: This method is used to get information about the patients
+  HEADERS: 
+    FIRST-NAME: 
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the first name in the values
+    
+    LAST-NAME:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the last name in the values
+    
+    UUID:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Filters query, only allowing results with this UUID
+
+

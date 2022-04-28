@@ -1,0 +1,8 @@
+{
+  "message": "Successfully inserted the data",
+   "data": {
+     "first_name": "JOAO", 
+     "last_name": "SILVA",
+      "date_of_birth": "1999-10-10 10:10:10.000000"
+    }
+}

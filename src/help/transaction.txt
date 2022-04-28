@@ -1,0 +1,44 @@
+ENDPOINT: /transactions
+  METHOD: GET
+  DESCRIPTION: This method is used to get information about the patients
+  HEADERS: 
+    PATIENT-FIRST-NAME: 
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the patient's first name in the values
+    
+    PATIENT-LAST-NAME:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the patient's last name in the values
+    
+    PATIENT-UUID:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Filters query, only allowing results with this patient UUID
+    
+    PHARMACY-NAME:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the pharmacy's name in the values
+    
+    PHARMACY-CITY:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Filters query, only allowing results that have this pharmacy city
+    
+    PHARMACY-UUID:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Filters query, only allowing results with this pharmacy UUID
+    
+    TRANSACTION-UUID:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Filters query, only allowing results with this transaction UUID
+    
+    
+    
+    
+
+

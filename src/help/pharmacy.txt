@@ -1,0 +1,20 @@
+ENDPOINT: /pharmacies
+  METHOD: GET
+  DESCRIPTION: This method is used to get information about the pharmacies
+  HEADERS: 
+    NAME: 
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the name in the values
+    
+    CITY:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Use as a query filter so that it only returns values that have the city in the values
+    
+    UUID:
+      OPTIONAL: TRUE
+      TYPE: STRING
+      DESCRIPTION: Filters query, only allowing results with this UUID
+
+

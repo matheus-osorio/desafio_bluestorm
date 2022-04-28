@@ -1,0 +1,7 @@
+{
+  "message": "Successfully inserted the data", 
+  "data": {
+     "amount": 100,
+     "timestamp": "1999-10-10 10:10:10.000000"
+  }
+}
