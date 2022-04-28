@@ -69,6 +69,10 @@ class SDK:
     except:
       raise ConnectionError('Something went wrong')
   
+  def new_user(self, username, password):
+    response = requests.request('post', self.base_address + 'create', headers = self.auth, json = {'username': username, 'password': password})
+    return json.loads(response.content)
+
   def insert(self, table: str, value_list: dict) -> dict:
     if not self.allow_use:
       raise ValueError('No authorization values found!')
@@ -91,4 +95,3 @@ class SDK:
       return json.loads(response.content)
     except:
       raise ConnectionError('Something Went Wrong')
-

@@ -38,6 +38,10 @@ configs_parser.add_argument('--url', required=True)
 configs_parser.add_argument('--username', required=True)
 configs_parser.add_argument('--password', required=True)
 
+user_parser = subparser.add_parser('users')
+user_parser.add_argument('--username', required=True)
+user_parser.add_argument('--password', required=True)
+
 obj = vars(parser.parse_args())
 
 configs = {}
@@ -52,6 +56,9 @@ if obj['command'] == 'config':
   del obj['command']
   file.write(json.dumps(obj, indent=2))
   file.close()
+
+elif obj['command'] == 'users':
+  response = requests.request('post', configs['url'] + 'create', headers = configs, json=obj)
 
 elif obj['command'] == 'transactions':
   if obj['method'] == 'insert':
